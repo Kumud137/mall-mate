@@ -1,0 +1,703 @@
+/* ========== BASIC SETTINGS ========== */
+:root {
+  --purple: #7c3aed;
+  --purple-dark: #6528d4;
+  --purple-light: #f1ebff;
+  --dark: #17213f;
+  --grey: #515873;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* all buttons look same */
+button {
+  background-color: var(--purple);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--purple-dark);
+}
+
+/* common section style */
+section {
+  padding: 50px 5%;
+  scroll-margin-top: 70px; /* sticky navbar ke neeche section na chhupe */
+}
+
+section h2 {
+  font-size: 32px;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+section > p {
+  font-size: 15px;
+  color: var(--grey);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.small-title {
+  color: var(--purple-dark);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: var(--purple-dark);
+}
+
+
+/* ========== NAVBAR ========== */
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  padding: 15px 18px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+
+.logo-name {
+  font-size: 27px;
+  font-weight: bold;
+  color: var(--dark);
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;  /* naam ke neeche tagline */
+}
+
+.brand {
+  color: var(--purple);
+}
+
+.tagline {
+  font-size: 10px;
+  color: var(--grey);
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: var(--dark);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--purple);
+}
+
+.search-box {
+  display: flex;
+}
+
+.search-box input {
+  width: 155px;
+  padding: 9px 12px;
+  border: 1px solid var(--purple);
+  border-radius: 20px 0 0 20px;
+  outline: none;
+}
+
+.search-box button {
+  width: 38px;
+  border-radius: 0 20px 20px 0;
+}
+
+#logo-image{
+  height:50px;
+  width:50px;
+  border-radius:50%;
+}
+/* ========== HERO ========== */
+#hero {
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  padding: 50px 4%;
+  color: white;
+
+  /* dark shade + mall image */
+  background:
+    linear-gradient(to right, rgba(15, 15, 20, 0.88), rgba(15, 15, 20, 0.15)),
+    url("../assets/images/icons/mall.jpg") center / cover no-repeat;
+}
+.hero-content {
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-small {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#hero h1 {
+  font-size: 48px;
+  line-height: 1.15;
+}
+
+#hero .highlight {
+  color: #d3a4ff;
+}
+
+.hero-description {
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* search bar (hero + explore stores dono me use hota hai) */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  max-width: 440px;
+  padding: 5px 5px 5px 18px;
+
+  background: white;
+  border-radius: 50px;
+}
+
+.search-bar i {
+  color: var(--purple);
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.search-bar button {
+  padding: 11px 24px;
+  font-weight: bold;
+}
+
+
+/* ========== QUICK ACCESS ========== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  min-height: 105px;
+  padding: 18px;
+  border-radius: 12px;
+  color: var(--dark);
+
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(35, 35, 75, 0.1);
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.card div {
+  flex: 1;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.card p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--grey);
+}
+
+.arrow {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: rgba(124, 58, 237, 0.12);
+  color: var(--purple);
+}
+
+.card:hover .arrow {
+  background-color: var(--purple);
+  color: white;
+}
+
+/* alag alag card colours */
+#card1 { background-color: #fff1f3; }
+#card2 { background-color: #eef4ff; }
+#card3 { background-color: #eef9f3; }
+#card4 { background-color: #fff5eb; }
+
+
+/* ========== EXPLORE STORES ========== */
+#explorestores {
+  background-color: #faf8ff;
+}
+
+#explorestores .search-bar {
+  border: 1px solid #eee5f5;
+  margin-bottom: 20px;
+}
+
+.category-buttons,
+.floor-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-buttons {
+  margin-bottom: 25px;
+}
+
+/* category + floor buttons: normal light, selected purple */
+.category-buttons button,
+.floor-buttons button {
+  background-color: var(--purple-light);
+  color: var(--purple);
+  padding: 9px 18px;
+}
+
+.category-buttons button:hover,
+.floor-buttons button:hover {
+  background-color: #e2d6ff;
+}
+
+.category-buttons button.active-btn,
+.floor-buttons button.active-btn {
+  background-color: var(--purple);
+  color: white;
+}
+
+.storecards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 20px;
+}
+
+.store {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 10px;
+  background: white;
+  border: 1px solid #eee5f5;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.store-images {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.store-info {
+  font-size: 12px;
+  color: var(--grey);
+}
+
+.store-info i {
+  color: var(--purple);
+  margin-right: 5px;
+}
+
+.details-btn {
+  width: 100%;
+  margin-top: 6px;
+  padding: 9px;
+  background-color: var(--purple-light);
+  color: var(--purple);
+  font-size: 12px;
+}
+
+.details-btn:hover {
+  background-color: var(--purple);
+  color: white;
+}
+
+#noResult {
+  display: none;
+  margin-top: 20px;
+}
+
+
+/* ========== POPUP (store + dining) ========== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding: 15px;
+
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.modal-content {
+  position: relative;
+  width: 380px;
+  max-width: 100%;
+  padding: 35px;
+
+  background: white;
+  color: var(--dark);
+  border-radius: 20px;
+  text-align: center;
+  animation: popupOpen 0.3s ease;
+}
+
+.modal-content h2 {
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+.modal-content p {
+  line-height: 1.7;
+  color: var(--grey);
+}
+
+.modal-content .small-title {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  color: var(--dark);
+  font-size: 25px;
+  padding: 0 6px;
+}
+
+.close-btn:hover {
+  background: none;
+  color: var(--purple);
+}
+
+@keyframes popupOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ========== MALL MAP ========== */
+.map-container {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 25px;
+  overflow: auto;
+  border-radius: 15px;
+  border: 1px solid #eee5f5;
+  background: white;
+}
+
+.map-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* ========== PARKING ========== */
+.parking-box {
+  max-width: 550px;
+  padding: 30px;
+
+  background: #faf8ff;
+  border: 1px solid #eee5f5;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.1);
+}
+
+.parking-box label {
+  display: block;
+  color: var(--dark);
+  font-size: 14px;
+  font-weight: 600;
+  margin: 18px 0 8px;
+}
+
+.parking-box input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid #d9ccf5;
+  border-radius: 10px;
+  outline: none;
+  background: white;
+  color: var(--dark);
+  font-size: 14px;
+}
+
+.parking-box input:focus {
+  border-color: var(--purple);
+}
+
+.parking-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+#parkingMessage {
+  margin-top: 18px;
+  color: var(--purple-dark);
+  font-weight: 600;
+}
+
+.parking-details {
+  display: none; /* JS isko save/find par dikhata hai */
+  margin-top: 20px;
+  padding: 20px;
+
+  background: white;
+  border: 1px solid #eee5f5;
+  border-radius: 15px;
+  color: var(--dark);
+}
+
+.parking-details h3 {
+  margin-bottom: 12px;
+}
+
+.parking-details p {
+  margin: 10px 0;
+}
+
+
+/* ========== DINING ========== */
+.dining-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.dining-card {
+  width: 200px;
+  text-align: center;
+}
+
+.dining-card img {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.dining-card h3 {
+  margin: 10px 0 4px;
+  color: var(--dark);
+}
+
+.dining-card p {
+  font-size: 14px;
+  color: var(--grey);
+  margin-bottom: 10px;
+}
+
+.dining-icon {
+  font-size: 38px;
+}
+
+.cuisine-badge {
+  display: inline-block;
+  background: var(--purple-light);
+  color: var(--purple);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+.dining-divider {
+  width: 55px;
+  height: 2px;
+  background: var(--purple);
+  margin: 20px auto;
+}
+
+.popular-box {
+  background: #faf8ff;
+  padding: 18px;
+  border-radius: 14px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.popular-box h4 {
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.popular-box p {
+  font-size: 14px;
+}
+
+.dining-footer {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+
+/* ========== FOOTER ========== */
+.mall-footer {
+  background: var(--dark);
+  color: #f1ebff;
+  padding: 50px 8% 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-bottom: 35px;
+}
+
+.footer-brand,
+.footer-links,
+.footer-mall {
+  flex: 1;
+  min-width: 180px;
+}
+
+.footer-brand h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-brand h2 span,
+.footer-bottom span {
+  color: #d3a4ff;
+}
+
+.footer-brand p,
+.footer-mall p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 8px 0;
+}
+
+.footer-links h3,
+.footer-mall h3 {
+  margin-bottom: 18px;
+}
+
+.footer-links a,
+.footer-mall a {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.footer-links a:hover,
+.footer-mall a:hover {
+  color: #d3a4ff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(241, 235, 255, 0.25);
+  padding: 18px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .mall-footer {
+    padding: 35px 7% 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 28px;
+  }
+}
+/* ========== MOBILE ========== */
+@media (max-width: 700px) {
+  #navbar {
+    justify-content: center;
+  }
+
+  .cards,
+  .storecards {
+    grid-template-columns: 1fr;
+  }
+}

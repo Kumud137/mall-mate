@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MallMate</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar">
+      <a href="#hero" class="logo">
+            <img  id="logo-image" src="assets/images/icons/shoppingbag.png" alt="Logo image">
+  <div class="logo-text">
+        <span class="logo-name">Mall<span class="brand">Mate</span></span>
+        <span class="tagline">Your Mall Shopping Assistant</span>
+  </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#hero" class="active">Home</a>
+        <a href="#explorestores">Explore Stores</a>
+        <a href="#mallmap">Mall Map</a>
+        <a href="#parking">Parking</a>
+        <a href="#dining">Dining</a>
+      </div>
+
+      <form class="search-box">
+        <input type="search" placeholder="Search stores..." />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-small">SHOP • EAT • EXPLORE</p>
+
+        <h1>
+          Your Perfect <br />
+          <span class="highlight">Mall Experience</span> <br />
+          Starts Here!
+        </h1>
+
+        <p class="hero-description">
+          Find stores, explore floors, discover offers, locate facilities and
+          plan your shopping - all in one place.
+        </p>
+   <form class="search-bar">
+          <i class="fa fa-search"></i>
+          <input type="search" placeholder="Search stores..." />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== QUICK ACCESS ========== -->
+    <section id="quickaccess">
+      <h2>Quick Access</h2>
+      <p>Get to your favourite features, in just one click!</p>
+
+      <div class="cards">
+        <a href="#explorestores" class="card" id="card1">
+          <img src="assets/images/icons/store.png" alt="" />
+          <div>
+            <h3>Explore Stores</h3>
+            <p>Discover stores across the mall.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="#mallmap" class="card" id="card2">
+          <img src="assets/images/icons/mall map.png" alt="" />
+          <div>
+            <h3>Mall Map</h3>
+            <p>Find stores and explore mall floors.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="#parking" class="card" id="card3">
+          <img src="assets/images/icons/parking assis.png" alt="" />
+          <div>
+            <h3>Parking Assistant</h3>
+            <p>Save your parking location.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+
+        <a href="#dining" class="card" id="card4">
+          <img src="assets/images/icons/food and dining.png" alt="" />
+          <div>
+            <h3>Food &amp; Dining</h3>
+            <p>Discover restaurants and cafes.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== EXPLORE STORES ========== -->
+    <section id="explorestores">
+      <p class="small-title">Explore</p>
+      <h2>Explore <span class="highlight">Stores</span></h2>
+      <p>Discover your favourite brands and find stores across the mall.</p>
+
+      <form class="search-bar" id="storeSearchForm">
+        <i class="fa fa-search"></i>
+        <input type="search" placeholder="Search stores by name..." id="storeSearch" />
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="category-buttons">
+        <button type="button" data-category="all" class="active-btn">All Stores</button>
+        <button type="button" data-category="fashion">Fashion</button>
+        <button type="button" data-category="beauty">Beauty</button>
+        <button type="button" data-category="electronics">Electronics</button>
+        <button type="button" data-category="footwear">Footwear</button>
+        <button type="button" data-category="lifestyle">Lifestyle</button>
+      </div>
+
+      <div class="storecards">
+        <div class="store" data-category="fashion">
+          <img src="assets/images/icons/H & M.jpg" class="store-images" alt="H&M store" />
+          <h4>H&amp;M</h4>
+          <p class="store-info"><i class="fa fa-tag"></i> Fashion</p>
+          <p class="store-info"><i class="fa fa-building-o"></i> Floor: UG (to be verified)</p>
+          <button type="button" class="details-btn">View Details</button>
+        </div>
+
+        <div class="store" data-category="fashion">
+          <!-- TODO: Shoppers Stop ki apni image lagana -->
+          <img src="assets/images/icons/shoppers stop.jpg" class="store-images" alt="Shoppers Stop store" />
+          <h4>Shoppers Stop</h4>
+          <p class="store-info"><i class="fa fa-tag"></i> Fashion</p>
+          <p class="store-info"><i class="fa fa-building-o"></i> Floor: To be verified</p>
+          <button type="button" class="details-btn">View Details</button>
+        </div>
+
+        <div class="store" data-category="beauty">
+          <img src="assets/images/icons/lifestyle.jpg" class="store-images" alt="Lifestyle store" />
+          <h4>Lifestyle</h4>
+          <p class="store-info"><i class="fa fa-tag"></i> Beauty</p>
+          <p class="store-info"><i class="fa fa-building-o"></i> Floor: To be verified</p>
+          <button type="button" class="details-btn">View Details</button>
+        </div>
+
+        <div class="store" data-category="electronics">
+          <img src="assets/images/icons/reliance digital.jpg" class="store-images" alt="Reliance Digital store" />
+          <h4>Reliance Digital</h4>
+          <p class="store-info"><i class="fa fa-tag"></i> Electronics</p>
+          <p class="store-info"><i class="fa fa-building-o"></i> Floor: To be verified</p>
+          <button type="button" class="details-btn">View Details</button>
+        </div>
+
+        <div class="store" data-category="footwear">
+          <img src="assets/images/icons/nike shop.jpg" class="store-images" alt="Nike store" />
+          <h4>Nike</h4>
+          <p class="store-info"><i class="fa fa-tag"></i> Footwear</p>
+          <p class="store-info"><i class="fa fa-building-o"></i> Floor: To be verified</p>
+          <button type="button" class="details-btn">View Details</button>
+        </div>
+
+        <div class="store" data-category="lifestyle">
+          <img src="assets/images/icons/westside.jpg" class="store-images" alt="Westside store" />
+          <h4>Westside</h4>
+          <p class="store-info"><i class="fa fa-tag"></i> Lifestyle</p>
+          <p class="store-info"><i class="fa fa-building-o"></i> Floor: To be verified</p>
+          <button type="button" class="details-btn">View Details</button>
+        </div>
+      </div>
+
+      <p id="noResult">No stores found.</p>
+    </section>
+
+    <!-- Store popup -->
+    <div class="modal" id="storeModal">
+      <div class="modal-content">
+        <button type="button" class="close-btn" id="closeModal">&times;</button>
+        <h2 id="modalStoreName">Store Name</h2>
+        <p id="modalCategory">Category</p>
+        <p id="modalFloor">Floor</p>
+      </div>
+    </div>
+
+    <!-- ========== MALL MAP ========== -->
+    <section id="mallmap">
+      <p class="small-title">Navigate</p>
+      <h2>Explore Mall Map</h2>
+      <p>Find your favourite stores across different floors.</p>
+
+      <div class="floor-buttons">
+        <button type="button" data-floor="ug" class="active-btn">Upper Ground</button>
+        <button type="button" data-floor="first">First Floor</button>
+        <button type="button" data-floor="second">Second Floor</button>
+      </div>
+
+      <div class="map-container">
+        <img
+          src="assets/images/icons/ground floor.png"
+          id="floorMap"
+          alt="Phoenix Citadel floor map"
+        />
+      </div>
+    </section>
+
+    <!-- ========== PARKING ========== -->
+    <section id="parking">
+      <p class="small-title">Remember</p>
+      <h2>Parking Assistant</h2>
+      <p>Save your parking location and find your car easily.</p>
+
+      <div class="parking-box">
+        <label for="parkingLevel">Parking Level</label>
+        <input type="text" id="parkingLevel" placeholder="Enter parking level" />
+
+        <label for="parkingSlot">Parking Slot</label>
+        <input type="text" id="parkingSlot" placeholder="Enter slot number" />
+
+        <label for="parkingNote">Additional Note (optional)</label>
+        <input type="text" id="parkingNote" placeholder="e.g. Near the lift" />
+
+        <div class="parking-buttons">
+          <button type="button" id="saveParking">Save My Parking</button>
+          <button type="button" id="findParking">Find My Car</button>
+          <button type="button" id="clearParking">Clear Location</button>
+        </div>
+
+        <p id="parkingMessage"></p>
+
+        <div class="parking-details" id="parkingDetails">
+          <h3>🚗 Your Parking Details</h3>
+          <p><strong>Level:</strong> <span id="resultLevel"></span></p>
+          <p><strong>Slot:</strong> <span id="resultSlot"></span></p>
+          <p><strong>Note:</strong> <span id="resultNote"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== DINING ========== -->
+    <section id="dining">
+      <p class="small-title">Discover</p>
+      <h2>Food &amp; Dining</h2>
+      <p>Explore restaurants and discover places to enjoy your favourite food.</p>
+
+      <div class="dining-cards">
+        <div class="dining-card">
+          <img src="assets/images/icons/cafe Macdonald.jpg" alt="McDonald's" />
+          <h3>McDonald's</h3>
+          <p>Fast Food</p>
+          <button type="button" class="dining-details">View Details</button>
+        </div>
+
+        <div class="dining-card">
+          <img src="assets/images/icons/KFC.jpg" alt="KFC" />
+          <h3>KFC</h3>
+          <p>Fast Food</p>
+          <button type="button" class="dining-details">View Details</button>
+        </div>
+
+        <div class="dining-card">
+          <img src="assets/images/icons/pizza hut_.jpg" alt="Pizza Hut" />
+          <h3>Pizza Hut</h3>
+          <p>Pizza</p>
+          <button type="button" class="dining-details">View Details</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dining popup -->
+    <div class="modal" id="diningModal">
+      <div class="modal-content">
+        <button type="button" class="close-btn" id="closeDiningModal">&times;</button>
+
+        <div class="dining-icon">🍽️</div>
+        <p class="small-title">Discover &amp; Enjoy</p>
+        <h2 id="diningName"></h2>
+        <span class="cuisine-badge" id="diningCuisine"></span>
+
+        <div class="dining-divider"></div>
+
+        <p id="diningDescription"></p>
+
+        <div class="popular-box">
+          <h4>✦ Popular Choices</h4>
+          <p id="diningPopular"></p>
+        </div>
+
+        <p class="dining-footer">Enjoy your dining experience!</p>
+      </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="mall-footer" id="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h2>MallMate<span>.</span></h2>
+          <p>Your Mall Shopping Assistant</p>
+          <p>Making your mall experience easier and more enjoyable.</p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <a href="#hero">Home</a>
+          <a href="#explorestores">Explore Stores</a>
+          <a href="#mallmap">Mall Map</a>
+          <a href="#parking">Parking Assistant</a>
+          <a href="#dining">Food &amp; Dining</a>
+        </div>
+
+        <div class="footer-mall">
+          <h3>Our Mall</h3>
+          <p>Phoenix Citadel</p>
+          <p>Indore, Madhya Pradesh</p>
+          <a
+            href="https://www.phoenixprideofindia.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Official Mall Website ↗</a
+          >
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 MallMate. Made with <span>♥</span></p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>      
